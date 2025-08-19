@@ -86,10 +86,10 @@ const Navbar = () => {
             <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#4977E5] group-hover:w-full transition-all duration-300"></span>
           </Link>
           <Link
-            to="/faq"
+            to="/blog"
             className="relative group hover:text-[#4977E5] transition-colors duration-200"
           >
-            FAQ
+            Blog
             <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#4977E5] group-hover:w-full transition-all duration-300"></span>
           </Link>
         </nav>
