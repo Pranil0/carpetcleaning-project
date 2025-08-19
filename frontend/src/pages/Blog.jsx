@@ -2,56 +2,72 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 
-// Import blog images
-import blog1 from "../assets/blog/blog1.png";
-import blog2 from "../assets/blog/blog2.png";
-import blog3 from "../assets/blog/blog3.png";
-import blog4 from "../assets/blog/blog4.png";
-import blog5 from "../assets/blog/blog5.png";
-import blog6 from "../assets/blog/blog6.png";
+// Thumbnails
+import blog1Thumbnail from "../assets/blog/blog1Thumbnail.png";
+import blog2Thumbnail from "../assets/blog/blog2Thumbnail.png";
+import blog3Thumbnail from "../assets/blog/blog3Thumbnail.png";
+import blog4Thumbnail from "../assets/blog/blog4Thumbnail.png";
+import blog5Thumbnail from "../assets/blog/blog5Thumbnail.png";
+import blog6Thumbnail from "../assets/blog/blog6Thumbnail.png";
+
+// Full Images
+import blog1Full from "../assets/blog/blog1Full.png";
+import blog2Full from "../assets/blog/blog2Full.png";
+import blog3Full from "../assets/blog/blog3Full.png";
+import blog4Full from "../assets/blog/blog4Full.png";
+import blog5Full from "../assets/blog/blog5Full.png";
+import blog6Full from "../assets/blog/blog6Full.png";
+
 
 // Hero background image
 import maskgroup from "../assets/maskgroup.png";
 
 const Blog = () => {
   const blogs = [
-    {
-      id: 1,
-      title: "Pet Owners’ Cleaning Guide: Keeping Homes Clean and Safe for Everyone",
-      desc: "Pets bring joy, but keeping your home clean is essential for safety and hygiene. Learn tips to maintain a spotless and safe environment for everyone.",
-      img: blog1,
-    },
-    {
-      id: 2,
-      title: "Why Professional Home Cleaning is Booming in Australia (and How You Can Benefit)",
-      desc: "Discover why professional cleaning is in demand, and how hiring experts can save you time while maintaining a healthy home.",
-      img: blog2,
-    },
-    {
-      id: 3,
-      title: "How Often Should You Really Clean These 15 Household Items?",
-      desc: "Avoid germs by knowing exactly when and how to clean your household items. This guide gives clear cleaning schedules.",
-      img: blog3,
-    },
-    {
-      id: 4,
-      title: "10 Everyday Cleaning Hacks That Actually Work",
-      desc: "Practical cleaning hacks that save time, money, and effort while keeping your home sparkling.",
-      img: blog4,
-    },
-    {
-      id: 5,
-      title: "Cleaning Schedules That Actually Work: Daily, Weekly, Monthly",
-      desc: "Organize your cleaning tasks efficiently with structured schedules that really work.",
-      img: blog5,
-    },
-    {
-      id: 6,
-      title: "5 Common Cleaning Mistakes That Could Be Harming Your Health",
-      desc: "Avoid common cleaning mistakes that could negatively affect your health and wellbeing.",
-      img: blog6,
-    },
-  ];
+  {
+    id: 1,
+    title: "Pet Owners’ Cleaning Guide",
+    desc: "Pets bring joy, but keeping your home clean is essential for safety and hygiene.",
+    thumbnail: blog1Thumbnail,
+    full: blog1Full,
+  },
+  {
+    id: 2,
+    title: "Why Professional Home Cleaning is Booming in Australia (and How You Can Benefit)",
+    desc: "Discover why professional cleaning is in demand, and how hiring experts can save you time while maintaining a healthy home.",
+    thumbnail: blog2Thumbnail,
+    full: blog2Full,
+  },
+  {
+    id: 3,
+    title: "How Often Should You Really Clean These 15 Household Items?",
+    desc: "Avoid germs by knowing exactly when and how to clean your household items. This guide gives clear cleaning schedules.",
+    thumbnail: blog3Thumbnail,
+    full: blog3Full,
+  },
+  {
+    id: 4,
+    title: "10 Everyday Cleaning Hacks That Actually Work",
+    desc: "Practical cleaning hacks that save time, money, and effort while keeping your home sparkling.",
+    thumbnail: blog4Thumbnail,
+    full: blog4Full,
+  },
+  {
+    id: 5,
+    title: "Cleaning Schedules That Actually Work: Daily, Weekly, Monthly",
+    desc: "Organize your cleaning tasks efficiently with structured schedules that really work.",
+    thumbnail: blog5Thumbnail,
+    full: blog5Full,
+  },
+  {
+    id: 6,
+    title: "5 Common Cleaning Mistakes That Could Be Harming Your Health",
+    desc: "Avoid common cleaning mistakes that could negatively affect your health and wellbeing.",
+    thumbnail: blog6Thumbnail,
+    full: blog6Full,
+  },
+];
+
 
   return (
     <div className="bg-white text-gray-800">
@@ -92,10 +108,11 @@ const Blog = () => {
               className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition hover:scale-105 duration-300"
             >
               <img
-                src={blog.img}
-                alt={blog.title}
-                className="w-full h-64 object-cover"
-              />
+  src={blog.thumbnail}
+  alt={blog.title}
+  className="w-full h-64 object-cover"
+/>
+
               <div className="p-6 space-y-3">
                 <h3 className="text-xl font-semibold text-gray-800">{blog.title}</h3>
                 <p className="text-gray-600 text-sm">{blog.desc}</p>

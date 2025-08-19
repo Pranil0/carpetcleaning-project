@@ -2,13 +2,12 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 
-// Import blog images
-import blog1 from "../assets/blog/blog1.png";
-import blog2 from "../assets/blog/blog2.png";
-import blog3 from "../assets/blog/blog3.png";
-import blog4 from "../assets/blog/blog4.png";
-import blog5 from "../assets/blog/blog5.png";
-import blog6 from "../assets/blog/blog6.png";
+import blog1Full from "../assets/blog/blog1Full.png";
+import blog2Full from "../assets/blog/blog2Full.png";
+import blog3Full from "../assets/blog/blog3Full.png";
+import blog4Full from "../assets/blog/blog4Full.png";
+import blog5Full from "../assets/blog/blog5Full.png";
+import blog6Full from "../assets/blog/blog6Full.png";
 
 // Hero background image
 import maskgroup from "../assets/maskgroup.png";
@@ -18,78 +17,122 @@ const BlogDetail = () => {
 
   const blogs = [
     {
-    id: 1,
-    title: "Pet Owners’ Cleaning Guide: Keeping Homes Clean and Safe for Everyone",
-    img: blog1,
-    sections: [
-      {
-        heading: "Introduction",
-        content:
-          "Pets bring joy and companionship to our homes, but they also introduce dirt, hair, and allergens that can affect both your family’s and your pets’ health. Maintaining a clean and safe environment is crucial for preventing illnesses, controlling odors, and creating a comfortable living space. This guide provides actionable steps for pet owners to keep their homes hygienic, organized, and welcoming."
-      },
-      {
-        heading: "1. Daily Cleaning Habits",
-        content:
-          "A clean home starts with daily maintenance. Vacuuming high-traffic areas and furniture helps remove pet hair, dust, and dander before it accumulates. Wiping your pets’ paws after walks prevents dirt and germs from spreading across floors and furniture. It’s also essential to clean food and water bowls daily using warm water and mild detergent, ensuring your pets eat in a hygienic environment. Additionally, immediately attending to any accidents or spills helps prevent stains and unpleasant odors from setting in."
-      },
-      {
-        heading: "2. Weekly Cleaning Routine",
-        content:
-          "Beyond daily maintenance, a weekly deep clean ensures a healthier living environment. Washing pet bedding, blankets, and soft toys in hot water removes bacteria and odors. Dusting and wiping surfaces, such as shelves, tables, and baseboards, reduces the accumulation of allergens. Litter boxes, cages, and other pet enclosures should be thoroughly cleaned with pet-safe solutions to prevent the growth of harmful bacteria. Floors should be mopped using non-toxic cleaners to maintain a safe environment for both pets and humans."
-      },
-      {
-        heading: "3. Pet-Friendly Cleaning Products",
-        content:
-          "Using the right cleaning products is essential to protect your pets from harmful chemicals. Non-toxic sprays and disinfectants are ideal for surfaces your pets frequently touch. Enzyme-based cleaners are highly effective at neutralizing stains and odors from accidents, while natural solutions like baking soda and vinegar can safely deodorize and clean floors, carpets, and furniture without causing harm."
-      },
-      {
-        heading: "4. Odor and Allergen Management",
-        content:
-          "Managing odors and allergens is key to a fresh and healthy home. HEPA filter air purifiers can trap pet dander, reducing allergy symptoms. Regular vacuuming of furniture, rugs, and carpets prevents buildup of hair and dust. Washing curtains, pet blankets, and other soft furnishings helps minimize allergens, and maintaining good ventilation ensures a clean airflow throughout the house. Finally, always wash your hands after handling pets to prevent the spread of germs."
-      },
-      {
-        heading: "Conclusion",
-        content:
-          "Consistency in cleaning routines is the secret to a safe, fresh, and comfortable home for both pets and humans. By following daily and weekly maintenance habits, using pet-friendly products, and actively managing odors and allergens, you ensure your home remains a healthy and happy environment where everyone can thrive."
-      }
-    ]
-  },
-    {
-  id: 2,
-  title: "Why Professional Home Cleaning is Booming in Australia (and How You Can Benefit)",
-  img: blog2,
-  sections: [
-    {
-      heading: "Introduction",
-      content:
-        "In today’s fast-paced world, time has become a precious commodity. With busy work schedules, family responsibilities, and social commitments, many homeowners struggle to maintain the level of cleanliness they desire. This growing demand has fueled the boom of professional home cleaning services across Australia. Beyond just appearances, these services provide health benefits, convenience, and peace of mind, allowing homeowners to focus on what truly matters."
+      id: 1,
+      title: "Pet Owners’ Cleaning Guide: Keeping Homes Clean and Safe for Everyone",
+      img: blog1Full,
+      sections: [
+        {
+          heading: "Introduction",
+          content:
+            "Pets bring joy and companionship to our homes, but they also introduce dirt, hair, and allergens that can affect both your family’s and your pets’ health. Maintaining a clean and safe environment is crucial for preventing illnesses, controlling odors, and creating a comfortable living space. This guide provides actionable steps for pet owners to keep their homes hygienic, organized, and welcoming."
+        },
+        {
+          heading: "1. Daily Cleaning Habits",
+          content:
+            "A clean home starts with daily maintenance. Vacuuming high-traffic areas and furniture helps remove pet hair, dust, and dander before it accumulates. Wiping your pets’ paws after walks prevents dirt and germs from spreading across floors and furniture. It’s also essential to clean food and water bowls daily using warm water and mild detergent, ensuring your pets eat in a hygienic environment. Additionally, immediately attending to any accidents or spills helps prevent stains and unpleasant odors from setting in."
+        },
+        {
+          heading: "2. Weekly Cleaning Routine",
+          content:
+            "Beyond daily maintenance, a weekly deep clean ensures a healthier living environment. Washing pet bedding, blankets, and soft toys in hot water removes bacteria and odors. Dusting and wiping surfaces, such as shelves, tables, and baseboards, reduces the accumulation of allergens. Litter boxes, cages, and other pet enclosures should be thoroughly cleaned with pet-safe solutions to prevent the growth of harmful bacteria. Floors should be mopped using non-toxic cleaners to maintain a safe environment for both pets and humans."
+        },
+        {
+          heading: "3. Pet-Friendly Cleaning Products",
+          content:
+            "Using the right cleaning products is essential to protect your pets from harmful chemicals. Non-toxic sprays and disinfectants are ideal for surfaces your pets frequently touch. Enzyme-based cleaners are highly effective at neutralizing stains and odors from accidents, while natural solutions like baking soda and vinegar can safely deodorize and clean floors, carpets, and furniture without causing harm."
+        },
+        {
+          heading: "4. Odor and Allergen Management",
+          content:
+            "Managing odors and allergens is key to a fresh and healthy home. HEPA filter air purifiers can trap pet dander, reducing allergy symptoms. Regular vacuuming of furniture, rugs, and carpets prevents buildup of hair and dust. Washing curtains, pet blankets, and other soft furnishings helps minimize allergens, and maintaining good ventilation ensures a clean airflow throughout the house. Finally, always wash your hands after handling pets to prevent the spread of germs."
+        },
+        {
+          heading: "Conclusion",
+          content:
+            "Consistency in cleaning routines is the secret to a safe, fresh, and comfortable home for both pets and humans. By following daily and weekly maintenance habits, using pet-friendly products, and actively managing odors and allergens, you ensure your home remains a healthy and happy environment where everyone can thrive."
+        }
+      ]
     },
     {
-      heading: "1. Benefits of Professional Cleaning",
-      content:
-        "Hiring a professional cleaning service offers numerous advantages. Experts bring specialized equipment and knowledge to tackle areas that are often neglected during routine cleaning. Deep cleaning hard-to-reach spots, such as behind appliances, inside vents, or under furniture, helps eliminate dust, allergens, and bacteria. Regular professional cleaning also extends the life of furniture, carpets, and surfaces, maintaining your home’s value and appearance. Most importantly, it significantly reduces stress, giving homeowners more free time while ensuring a healthy living environment."
+      id: 2,
+      title: "Why Professional Home Cleaning is Booming in Australia (and How You Can Benefit)",
+      img: blog2Full,
+      sections: [
+        {
+          heading: "Introduction",
+          content:
+            "In today’s fast-paced world, time has become a precious commodity. With busy work schedules, family responsibilities, and social commitments, many homeowners struggle to maintain the level of cleanliness they desire. This growing demand has fueled the boom of professional home cleaning services across Australia. Beyond just appearances, these services provide health benefits, convenience, and peace of mind, allowing homeowners to focus on what truly matters."
+        },
+        {
+          heading: "1. Benefits of Professional Cleaning",
+          content:
+            "Hiring a professional cleaning service offers numerous advantages. Experts bring specialized equipment and knowledge to tackle areas that are often neglected during routine cleaning. Deep cleaning hard-to-reach spots, such as behind appliances, inside vents, or under furniture, helps eliminate dust, allergens, and bacteria. Regular professional cleaning also extends the life of furniture, carpets, and surfaces, maintaining your home’s value and appearance. Most importantly, it significantly reduces stress, giving homeowners more free time while ensuring a healthy living environment."
+        },
+        {
+          heading: "2. Typical Services Offered",
+          content:
+            "Professional cleaning companies provide a wide range of services tailored to meet specific needs. Common offerings include carpet and upholstery cleaning, bathroom and kitchen deep cleans, window and surface polishing, floor mopping and polishing, and specialized treatments for allergies or pet-related messes. Many services also use eco-friendly products that are safe for children, pets, and the environment, making the cleaning process both effective and sustainable."
+        },
+        {
+          heading: "3. Tips for Choosing the Right Service",
+          content:
+            "Not all cleaning services are created equal, so selecting the right provider is crucial. Research online reviews and testimonials to understand the quality of service. Confirm that the company uses environmentally friendly cleaning products and equipment. Compare pricing structures and service packages to ensure you get value for your money. Additionally, verify that the service offers insurance coverage and guarantees, providing peace of mind in case of any accidental damage during cleaning."
+        },
+        {
+          heading: "Conclusion",
+          content:
+            "Professional home cleaning is no longer a luxury; it has become a practical solution for modern homeowners seeking convenience, hygiene, and time efficiency. By investing in expert cleaning services, you maintain a healthier, cleaner, and more comfortable home, while freeing up valuable time to focus on family, work, and personal activities. The boom in professional cleaning is a reflection of its undeniable benefits and growing importance in contemporary Australian lifestyles."
+        }
+      ]
     },
     {
-      heading: "2. Typical Services Offered",
-      content:
-        "Professional cleaning companies provide a wide range of services tailored to meet specific needs. Common offerings include carpet and upholstery cleaning, bathroom and kitchen deep cleans, window and surface polishing, floor mopping and polishing, and specialized treatments for allergies or pet-related messes. Many services also use eco-friendly products that are safe for children, pets, and the environment, making the cleaning process both effective and sustainable."
+      id: 3,
+      title: "How Often Should You Really Clean These 15 Household Items?",
+      img: blog3Full,
+      sections: [
+        {
+          heading: "Introduction",
+          content:
+            "A clean home is essential for health and hygiene. Many household items are often overlooked, allowing germs, bacteria, and allergens to accumulate. Knowing how often to clean specific items helps prevent illness and ensures a fresh, safe living environment. This guide provides a practical cleaning schedule for 15 commonly used household items."
+        },
+        {
+          heading: "Daily Cleaning",
+          content:
+            "Kitchen Counters – Wipe down after every meal to prevent bacteria and food residue buildup.\n" +
+            "Stovetops – Clean spills and splatters daily to avoid grease hardening.\n" +
+            "Dishes & Utensils – Wash immediately after use to prevent contamination and odors.\n" +
+            "Bathroom Sinks – Rinse and wipe daily to remove toothpaste, soap scum, and germs.\n" +
+            "Faucets – Polish with disinfectant wipes daily to kill bacteria.\n" +
+            "High-Touch Surfaces (Door Handles, Light Switches, Remotes) – Sanitize daily to reduce the spread of germs, especially during flu season."
+        },
+        {
+          heading: "Weekly Cleaning",
+          content:
+            "Bed Linens – Wash pillowcases and sheets weekly to remove sweat, dust mites, and allergens.\n" +
+            "Pillowcases – Highlight separately because they accumulate oils and bacteria from skin and hair.\n" +
+            "Floors – Vacuum or mop weekly to eliminate dust, pet hair, and dirt.\n" +
+            "Carpets – Vacuum weekly to prevent buildup and maintain air quality.\n" +
+            "Windows & Mirrors – Wipe once a week for streak-free, brighter living spaces.\n" +
+            "Bathroom Tiles & Showers – Scrub weekly to prevent mold, mildew, and grime buildup."
+        },
+        {
+          heading: "Monthly Cleaning",
+          content:
+            "Curtains & Blinds – Dust or vacuum monthly to reduce allergens.\n" +
+            "Upholstered Furniture (Sofas, Chairs, Cushions) – Vacuum and deep clean monthly to remove dust, pet hair, and odors.\n" +
+            "Refrigerator (Interior) – Wipe shelves and drawers monthly to prevent bacteria, spills, and unpleasant smells."
+        },
+        {
+          heading: "Conclusion",
+          content:
+            "By following this cleaning schedule—daily, weekly, and monthly—you can maintain a hygienic, safe, and visually appealing home. Consistent cleaning prevents the accumulation of germs and allergens, ensuring a healthier environment for your family while reducing the stress of large, infrequent cleaning tasks."
+        }
+      ]
     },
-    {
-      heading: "3. Tips for Choosing the Right Service",
-      content:
-        "Not all cleaning services are created equal, so selecting the right provider is crucial. Research online reviews and testimonials to understand the quality of service. Confirm that the company uses environmentally friendly cleaning products and equipment. Compare pricing structures and service packages to ensure you get value for your money. Additionally, verify that the service offers insurance coverage and guarantees, providing peace of mind in case of any accidental damage during cleaning."
-    },
-    {
-      heading: "Conclusion",
-      content:
-        "Professional home cleaning is no longer a luxury; it has become a practical solution for modern homeowners seeking convenience, hygiene, and time efficiency. By investing in expert cleaning services, you maintain a healthier, cleaner, and more comfortable home, while freeing up valuable time to focus on family, work, and personal activities. The boom in professional cleaning is a reflection of its undeniable benefits and growing importance in contemporary Australian lifestyles."
-    }
-  ]
-},
-    {
+   {
   id: 3,
   title: "How Often Should You Really Clean These 15 Household Items?",
-  img: blog3,
+  img: blog3Full,
   sections: [
     {
       heading: "Introduction",
@@ -97,19 +140,31 @@ const BlogDetail = () => {
         "A clean home is essential for health and hygiene. Many household items are often overlooked, allowing germs, bacteria, and allergens to accumulate. Knowing how often to clean specific items helps prevent illness and ensures a fresh, safe living environment. This guide provides a practical cleaning schedule for 15 commonly used household items."
     },
     {
-      heading: "1. Daily Cleaning",
-      content:
-        "Certain items need attention every day to maintain a healthy environment. Kitchen counters and stovetops should be wiped down after every meal to prevent bacteria and food residue buildup. Dishes and utensils must be washed immediately after use to avoid contamination. Bathroom sinks and faucets should be cleaned daily to remove soap scum and germs. High-touch surfaces, such as door handles, light switches, and remotes, should also be sanitized daily to reduce the spread of bacteria."
+      heading: "Daily Cleaning",
+      content: 
+        "• Kitchen Counters – Wipe down after every meal to prevent bacteria and food residue buildup.\n" +
+        "• Stovetops – Clean spills and splatters daily to avoid grease hardening.\n" +
+        "• Dishes & Utensils – Wash immediately after use to prevent contamination and odors.\n" +
+        "• Bathroom Sinks – Rinse and wipe daily to remove toothpaste, soap scum, and germs.\n" +
+        "• Faucets – Polish with disinfectant wipes daily to kill bacteria.\n" +
+        "• High-Touch Surfaces (Door Handles, Light Switches, Remotes) – Sanitize daily to reduce the spread of germs, especially during flu season."
     },
     {
-      heading: "2. Weekly Cleaning",
-      content:
-        "Some household items require a more thorough clean once a week. Bed linens and pillowcases should be washed weekly to remove sweat, dust mites, and allergens. Floors and carpets should be vacuumed or mopped to remove dirt, dust, and pet hair. Windows and mirrors should be cleaned to maintain streak-free surfaces and brighter living spaces. Bathroom tiles and showers need scrubbing to prevent mold, mildew, and grime buildup."
+      heading: "Weekly Cleaning",
+      content: 
+        "• Bed Linens – Wash pillowcases and sheets weekly to remove sweat, dust mites, and allergens.\n" +
+        "• Pillowcases – Highlight separately because they accumulate oils and bacteria from skin and hair.\n" +
+        "• Floors – Vacuum or mop weekly to eliminate dust, pet hair, and dirt.\n" +
+        "• Carpets – Vacuum weekly to prevent buildup and maintain air quality.\n" +
+        "• Windows & Mirrors – Wipe once a week for streak-free, brighter living spaces.\n" +
+        "• Bathroom Tiles & Showers – Scrub weekly to prevent mold, mildew, and grime buildup."
     },
     {
-      heading: "3. Monthly Cleaning",
+      heading: "Monthly Cleaning",
       content:
-        "Certain items benefit from deep cleaning once a month. Curtains and blinds should be dusted or vacuumed to reduce allergens. Upholstered furniture requires deep cleaning to remove dust, pet hair, and odors. Refrigerator and oven interiors should be cleaned to prevent bacteria and residue buildup. Chairs, shelves, and decorative furniture should be wiped down to prolong their lifespan and maintain a dust-free environment."
+        "• Curtains & Blinds – Dust or vacuum monthly to reduce allergens.\n" +
+        "• Upholstered Furniture (Sofas, Chairs, Cushions) – Vacuum and deep clean monthly to remove dust, pet hair, and odors.\n" +
+        "• Refrigerator (Interior) – Wipe shelves and drawers monthly to prevent bacteria, spills, and unpleasant smells."
     },
     {
       heading: "Conclusion",
@@ -117,11 +172,13 @@ const BlogDetail = () => {
         "By following this cleaning schedule—daily, weekly, and monthly—you can maintain a hygienic, safe, and visually appealing home. Consistent cleaning prevents the accumulation of germs and allergens, ensuring a healthier environment for your family while reducing the stress of large, infrequent cleaning tasks."
     }
   ]
-},
+}
+
+,
     {
   id: 4,
   title: "10 Everyday Cleaning Hacks That Actually Work",
-  img: blog4,
+  img: blog4Full,
   sections: [
     {
       heading: "Introduction",
@@ -188,7 +245,7 @@ const BlogDetail = () => {
     {
   id: 5,
   title: "Cleaning Schedules That Actually Work: Daily, Weekly, Monthly",
-  img: blog5,
+  img: blog5Full,
   sections: [
     {
       heading: "Introduction",
@@ -221,7 +278,7 @@ const BlogDetail = () => {
     {
   id: 6,
   title: "5 Common Cleaning Mistakes That Could Be Harming Your Health",
-  img: blog6,
+  img: blog6Full,
   sections: [
     {
       heading: "Introduction",
@@ -260,7 +317,6 @@ const BlogDetail = () => {
     }
   ]
 }
-
   ];
 
   const blog = blogs.find((b) => b.id === parseInt(id));
@@ -298,28 +354,29 @@ const BlogDetail = () => {
 
       {/* Blog Content */}
       <section className="max-w-4xl mx-auto py-12 px-6 space-y-8">
-  <img src={blog.img} alt={blog.title} className="w-full h-auto rounded-lg" />
-  <h2 className="text-3xl font-bold">{blog.title}</h2>
+        <img src={blog.img} alt={blog.title} className="w-full h-auto rounded-lg" />
+        <h2 className="text-3xl font-bold">{blog.title}</h2>
 
-  {blog.sections.map((section, index) => (
-    <div key={index} className="mt-6 space-y-2">
-      <h3 className="text-2xl font-semibold">{section.heading}</h3>
+        {blog.sections.map((section, index) => (
+          <div key={index} className="mt-6 space-y-2">
+            <h3 className="text-2xl font-semibold">{section.heading}</h3>
 
-      {section.content && (
-        <p className="text-gray-700 leading-relaxed">{section.content}</p>
-      )}
-
-      {section.list && (
-        <ul className="list-disc ml-6 text-gray-700 space-y-1">
-          {section.list.map((item, i) => (
-            <li key={i}>{item.replace(/^[\u2700-\u27BF\u1F300-\u1F5FF\u1F600-\u1F64F\u1F680-\u1F6FF\u1F900-\u1F9FF]/g,'')}</li>
-          ))}
-        </ul>
-      )}
-    </div>
-  ))}
-</section>
-
+            {section.content && (
+              <div className="text-gray-700 leading-relaxed space-y-2">
+                {section.content.split("\n").map((line, i) => (
+                  <p key={i}>
+                    {line.includes("–") ? (
+                      <span className="block ml-4 list-disc">• {line.trim()}</span>
+                    ) : (
+                      line
+                    )}
+                  </p>
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
+      </section>
     </div>
   );
 };
