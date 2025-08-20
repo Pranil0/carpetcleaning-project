@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 import CountUp from "react-countup";
@@ -33,6 +35,24 @@ import liquid from "../assets/liquid.png";
 import mop from "../assets/mop.png";
 import vacum from "../assets/vacum.png";
 
+import blog1Thumbnail from "../assets/blog/blog1Thumbnail.png";
+import blog2Thumbnail from "../assets/blog/blog2Thumbnail.png";
+import blog3Thumbnail from "../assets/blog/blog3Thumbnail.png";
+import blog4Thumbnail from "../assets/blog/blog4Thumbnail.png";
+import blog5Thumbnail from "../assets/blog/blog5Thumbnail.png";
+import blog6Thumbnail from "../assets/blog/blog6Thumbnail.png";
+
+// Full Images
+import blog1Full from "../assets/blog/blog1Full.png";
+import blog2Full from "../assets/blog/blog2Full.png";
+import blog3Full from "../assets/blog/blog3Full.png";
+import blog4Full from "../assets/blog/blog4Full.png";
+import blog5Full from "../assets/blog/blog5Full.png";
+import blog6Full from "../assets/blog/blog6Full.png";
+
+
+
+
 const features = [
   {
     icon: <FaTags className="text-[#4977E5] text-3xl" />,
@@ -57,59 +77,60 @@ const features = [
 ];
 
 const serviceCards = [
-  {
-    title: "Carpet Cleaning",
-    desc: "Deep steam cleaning to remove dirt, stains, and allergens.",
-    img: cleaningbrush,
-  },
-  {
-    title: "Rug Cleaning",
-    desc: "Gentle treatment to keep your rugs looking new.",
-    img: cleaningman,
-  },
-  {
-    title: "Leather Cleaning",
-    desc: "Special care for leather furniture to restore its shine.",
-    img: leathercleaning,
-  },
-  {
-    title: "Upholstery Cleaning",
-    desc: "Remove dirt and stains from sofas, chairs, and more.",
-    img: upholsteryImage,
-  },
-  {
-    title: "Mattress Cleaning",
-    desc: "Sanitize and refresh your mattress for healthier sleep.",
-    img: mattressImage,
-  },
-  {
-    title: "Tile Cleaning",
-    desc: "Deep clean tiles and grout to restore shine.",
-    img: tileImage,
-  },
+  { title: "Carpet Steam Cleaning", desc: "Deep steam cleaning to remove dirt, stains, and allergens.", img: cleaningbrush },
+  { title: "Upholstery Steam Cleaning", desc: "Remove dirt and stains from sofas, chairs, and more.", img: upholsteryImage },
+  { title: "Mattress Steam Cleaning", desc: "Sanitize and refresh your mattress for healthier sleep.", img: mattressImage },
+  { title: "Flood Damage Restoration", desc: "Professional restoration to minimize water damage.", img: cleaningman },
+  { title: "Leather Cleaning", desc: "Special care for leather furniture to restore its shine.", img: leathercleaning },
+  { title: "Carpet Patch Repair", desc: "Fix damaged or worn sections of your carpets.", img: cleaningbrush },
+  { title: "Stain Removal", desc: "Remove tough stains effectively from various surfaces.", img: cleaningman },
+  { title: "Tile Steam Cleaning", desc: "Deep clean tiles and grout to restore shine.", img: tileImage },
+  { title: "Car Seats Steam Cleaning", desc: "Professional cleaning for car interiors and seats.", img: upholsteryImage },
 ];
 
 // Latest News style cards data
-const newsCards = [
+const blogs = [
   {
-    title: "5 Ways to Keep Your Carpet Fresh All Year",
-    desc: "Lorem ipsum dolor sit consectetur adipiscing elit Nunc vulputate libero...",
-    img: vacum,
+    id: 1,
+    title: "Pet Owners’ Cleaning Guide",
+    desc: "Pets bring joy, but keeping your home clean is essential for safety and hygiene.",
+    thumbnail: blog1Thumbnail,
+    full: blog1Full,
   },
   {
-    title: "Why Professional Cleaning Saves You Money",
-    desc: "Lorem ipsum dolor sit consectetur adipiscing elit Nunc vulputate libero...",
-    img: liquid,
+    id: 2,
+    title: "Why Professional Home Cleaning is Booming in Australia (and How You Can Benefit)",
+    desc: "Discover why professional cleaning is in demand, and how hiring experts can save you time while maintaining a healthy home.",
+    thumbnail: blog2Thumbnail,
+    full: blog2Full,
   },
   {
-    title: "The Truth About Dust Mites & Your Mattress",
-    desc: "Lorem ipsum dolor sit consectetur adipiscing elit Nunc vulputate libero...",
-    img: gloves,
+    id: 3,
+    title: "How Often Should You Really Clean These 15 Household Items?",
+    desc: "Avoid germs by knowing exactly when and how to clean your household items. This guide gives clear cleaning schedules.",
+    thumbnail: blog3Thumbnail,
+    full: blog3Full,
   },
   {
-    title: "The Surprising Reason College Tuition Is Crazy Expensive",
-    desc: "Lorem ipsum dolor sit consectetur adipiscing elit Nunc vulputate libero...",
-    img: mop,
+    id: 4,
+    title: "10 Everyday Cleaning Hacks That Actually Work",
+    desc: "Practical cleaning hacks that save time, money, and effort while keeping your home sparkling.",
+    thumbnail: blog4Thumbnail,
+    full: blog4Full,
+  },
+  {
+    id: 5,
+    title: "Cleaning Schedules That Actually Work: Daily, Weekly, Monthly",
+    desc: "Organize your cleaning tasks efficiently with structured schedules that really work.",
+    thumbnail: blog5Thumbnail,
+    full: blog5Full,
+  },
+  {
+    id: 6,
+    title: "5 Common Cleaning Mistakes That Could Be Harming Your Health",
+    desc: "Avoid common cleaning mistakes that could negatively affect your health and wellbeing.",
+    thumbnail: blog6Thumbnail,
+    full: blog6Full,
   },
 ];
 
@@ -173,43 +194,58 @@ const Home = () => {
       </div>
 
       {/* Latest Projects */}
+<div
+  className="mt-24 px-6 lg:px-20 max-w-7xl mx-auto text-center"
+  data-aos="fade-up"
+>
+  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+    Keep your vision to our latest <br />
+    <span className="inline-block mt-1">projects.</span>
+  </h2>
+  <p className="text-gray-500 text-base md:text-lg max-w-2xl mx-auto mb-10">
+    Awesome site. on the top advertising a business online includes{" "}
+    <br className="hidden sm:block" />
+    assembling Having the most keep.
+  </p>
+
+  {/* Show only first 6 service cards */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    {serviceCards.slice(0, 6).map((card, idx) => (
       <div
-        className="mt-24 px-6 lg:px-20 max-w-7xl mx-auto text-center"
-        data-aos="fade-up"
+        key={idx}
+        className="group bg-white text-gray-900 rounded-xl p-6 shadow-md hover:scale-105 transition duration-300 hover:bg-[#5B74E7] hover:text-white"
+        data-aos="zoom-in"
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          Keep your vision to our latest <br />
-          <span className="inline-block mt-1">projects.</span>
-        </h2>
-        <p className="text-gray-500 text-base md:text-lg max-w-2xl mx-auto mb-10">
-          Awesome site. on the top advertising a business online includes{" "}
-          <br className="hidden sm:block" />
-          assembling Having the most keep.
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {serviceCards.map((card, idx) => (
-            <div
-              key={idx}
-              className="group bg-white text-gray-900 rounded-xl p-6 shadow-md hover:scale-105 transition duration-300 hover:bg-[#5B74E7] hover:text-white"
-              data-aos="zoom-in"
-            >
-              <div className="flex justify-center mb-4">
-                <div className="w-20 h-20 rounded-full bg-white p-3 transition duration-300 group-hover:bg-[#5B74E7]">
-                  <img
-                    src={card.img}
-                    alt={card.title}
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">{card.title}</h3>
-              <p className="text-sm leading-relaxed group-hover:text-white">
-                {card.desc}
-              </p>
-            </div>
-          ))}
+        <div className="flex justify-center mb-4">
+          <div className="w-20 h-20 rounded-full bg-white p-3 transition duration-300 group-hover:bg-[#5B74E7]">
+            <img
+              src={card.img}
+              alt={card.title}
+              className="w-full h-full object-contain"
+            />
+          </div>
         </div>
+        <h3 className="text-xl font-semibold mb-2">{card.title}</h3>
+        <p className="text-sm leading-relaxed group-hover:text-white">
+          {card.desc}
+        </p>
       </div>
+    ))}
+  </div>
+
+  {/* View More Button */}
+  {serviceCards.length > 6 && (
+    <div className="text-center mt-8">
+      <Link
+        to="/services"
+        className="px-6 py-3 bg-[#5B74E7] text-white rounded-full font-medium hover:bg-[#3b65cc] transition"
+      >
+        View More
+      </Link>
+    </div>
+  )}
+</div>
+
 
       {/* We Make Mess Look Great */}
       <div
@@ -326,17 +362,20 @@ const Home = () => {
       >
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           {/* Left Side Text */}
-          <div className="lg:w-1/2">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Save 30% Monthly
-            </h2>
-            <ul className="space-y-4 text-gray-500 text-lg">
-              <li>• “Save 30% Every Month with Our Cleaning Plans”</li>
-              <li>• “Affordable Packages – More Cleaning, Less Cost”</li>
-              <li>• “Get More Shine for Less – Flexible Monthly Options”</li>
-              <li>• “Regular Cleaning, Big Savings – Choose Your Plan”</li>
-            </ul>
-          </div>
+          <div className="bg-[#F3F6FF] rounded-2xl p-8 flex flex-col justify-center space-y-6 shadow-lg">
+      <h3 className="text-2xl md:text-3xl font-bold text-[#5B74E7]">
+        Save 30% Monthly
+      </h3>
+      <p className="text-gray-700 font-medium">
+        Save 30% Every Month with Our Cleaning Plans
+      </p>
+      <ul className="space-y-3 text-gray-600 list-disc list-inside">
+        <li>Affordable Packages – More Cleaning, Less Cost</li>
+        <li>Get More Shine for Less – Flexible Monthly Options</li>
+        <li>Regular Cleaning, Big Savings – Choose Your Plan</li>
+      </ul>
+    </div>
+
 
           {/* Right Side Plans */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:w-1/2">
@@ -613,47 +652,53 @@ const Home = () => {
         </div>
       </div>
       {/* Latest News Style Section */}
+<div
+  className="mt-24 px-6 lg:px-20 max-w-7xl mx-auto"
+  data-aos="fade-up"
+>
+  <h2 className="text-4xl font-bold text-center text-gray-900 mb-2">
+    Our Latest News
+  </h2>
+  <p className="text-center text-gray-500 mb-10 max-w-2xl mx-auto">
+    Awesome site. on the top advertising a business online includes
+    assembling Having the most keep.
+  </p>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    {blogs.map((card, idx) => (
       <div
-        className="mt-24 px-6 lg:px-20 max-w-7xl mx-auto"
-        data-aos="fade-up"
+        key={idx}
+        className="flex bg-white rounded-2xl shadow-lg overflow-hidden group"
       >
-        <h2 className="text-4xl font-bold text-center text-gray-900 mb-2">
-          Our Latest News
-        </h2>
-        <p className="text-center text-gray-500 mb-10 max-w-2xl mx-auto">
-          Awesome site. on the top advertising a business online includes
-          assembling Having the most keep.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {newsCards.map((card, idx) => (
-            <div
-              key={idx}
-              className="flex bg-white rounded-2xl shadow-lg overflow-hidden group"
-            >
-              <div className="w-1/3">
-                <img
-                  src={card.img}
-                  alt={card.title}
-                  className="object-cover w-full h-full"
-                />
-              </div>
-              <div className="w-2/3 p-6 flex flex-col justify-between">
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    {card.title}
-                  </h3>
-                  <p className="text-gray-500 text-sm mb-4">{card.desc}</p>
-                </div>
-                <div>
-                  <button className="text-[#5B74E7] font-medium inline-flex items-center gap-1 hover:underline">
-                    Learn More <span className="transform translate-y-[1px]">→</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))}
+        <div className="w-1/3">
+          <img
+            src={card.thumbnail}
+            alt={card.title}
+            className="object-cover w-full h-full"
+          />
+        </div>
+        <div className="w-2/3 p-6 flex flex-col justify-between">
+          <div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">
+              {card.title}
+            </h3>
+            <p className="text-gray-500 text-sm mb-4">{card.desc}</p>
+          </div>
+       
+
+<div>
+  <Link
+    to={`/blog/${card.id}`} // dynamic route for specific blog
+    className="text-[#5B74E7] font-medium inline-flex items-center gap-1 hover:underline"
+  >
+    Learn More <span className="transform translate-y-[1px]">→</span>
+  </Link>
+</div>
+
         </div>
       </div>
+    ))}
+  </div>
+</div>
 
       {/* CTA Section */}
 <div

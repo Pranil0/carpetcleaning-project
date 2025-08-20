@@ -116,12 +116,15 @@ const Blog = () => {
               <div className="p-6 space-y-3">
                 <h3 className="text-xl font-semibold text-gray-800">{blog.title}</h3>
                 <p className="text-gray-600 text-sm">{blog.desc}</p>
-                <Link
-                  to={`/blog/${blog.id}`}
-                  className="mt-2 inline-block text-blue-600 font-medium hover:underline"
-                >
-                  Read More →
-                </Link>
+                <div>
+  <Link
+  to={`/blog/${card.id}`}
+  className="text-[#5B74E7] font-medium inline-flex items-center gap-1 hover:underline"
+>
+  Learn More →
+</Link>
+
+</div>
               </div>
             </div>
           ))}
